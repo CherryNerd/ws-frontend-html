@@ -1,0 +1,62 @@
+//@use "sass:map";
+
+$houses: (
+        Hogwarts: (
+                primary: #80357b,
+                darker: #5f2f5a,
+                text: #ffffff,
+        ),
+        Ravenclaw: (
+                primary : #0f507b,
+                darker: #222748,
+                text: #ffffff,
+        ),
+        Gryffindor: (
+                primary: #890812,
+                darker: #5d0812,
+                text: #ffffff,
+        ),
+        Slytherin: (
+                primary: #0e521d,
+                darker: #063c07,
+                text: #ffffff,
+        ),
+        Hufflepuff: (
+                primary: #efb63c,
+                darker: #986c21,
+                text: #362e2a,
+        ),
+);
+
+@each $house-key, $house-map in $houses {
+  .#{$house-key} {
+    nav {
+      background-color: map-get($house-map, primary);
+      justify-content: space-evenly;
+
+      > * {
+        padding:10px;
+      }
+
+      a {
+        text-transform: uppercase;
+        color: map-get($house-map, text);
+        text-decoration: none;
+      }
+    }
+
+    footer {
+      background-color: map-get($house-map, primary);
+    }
+
+    button, .button {
+      @extend .absolute-center;
+      background-color: map-get($house-map, primary);
+      border-color: map-get($house-map, darker);
+      color: map-get($house-map, text);
+      display: flex;
+      padding: 3px;
+      border-radius: 3px;
+    }
+  }
+}

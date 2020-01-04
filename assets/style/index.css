@@ -1,0 +1,271 @@
+.flex, .card .title, .flex-column, .side .instagram-post, .main-content > .events, .main-content, .flex-row, .main-content > .products, .flex-no-grow, .side {
+  display: flex;
+  flex-grow: 1;
+}
+
+.flex2, .main-content > .products {
+  display: flex;
+  flex-grow: 2;
+}
+
+.flex-no-grow, .side {
+  flex-grow: 0;
+}
+
+.flex-row, .main-content > .products {
+  flex-direction: row;
+}
+
+.flex-column, .side .instagram-post, .main-content > .events, .main-content {
+  flex-direction: column;
+}
+
+.wrap, .main-content > .events {
+  flex-wrap: wrap;
+}
+
+.nowrap {
+  flex-wrap: nowrap;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.content-center {
+  align-content: center;
+}
+
+.content-end {
+  align-content: flex-end;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.items-end {
+  align-items: flex-end;
+}
+
+.absolute-center, .Hufflepuff button, .Hufflepuff .button, .Slytherin button, .Slytherin .button, .Gryffindor button, .Gryffindor .button, .Ravenclaw button, .Ravenclaw .button, .Hogwarts button, .Hogwarts .button, .card .title {
+  justify-content: center;
+  align-items: center;
+}
+
+.containerMarginLeftRight {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 0;
+  margin: 20px;
+  padding: 20px;
+  box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.25);
+}
+.card .title {
+  justify-content: space-evenly;
+}
+.Hogwarts nav {
+  background-color: #80357b;
+  justify-content: space-evenly;
+}
+.Hogwarts nav > * {
+  padding: 10px;
+}
+.Hogwarts nav a {
+  text-transform: uppercase;
+  color: #ffffff;
+  text-decoration: none;
+}
+.Hogwarts footer {
+  background-color: #80357b;
+}
+.Hogwarts button, .Hogwarts .button {
+  background-color: #80357b;
+  border-color: #5f2f5a;
+  color: #ffffff;
+  display: flex;
+  padding: 3px;
+  border-radius: 3px;
+}
+
+.Ravenclaw nav {
+  background-color: #0f507b;
+  justify-content: space-evenly;
+}
+.Ravenclaw nav > * {
+  padding: 10px;
+}
+.Ravenclaw nav a {
+  text-transform: uppercase;
+  color: #ffffff;
+  text-decoration: none;
+}
+.Ravenclaw footer {
+  background-color: #0f507b;
+}
+.Ravenclaw button, .Ravenclaw .button {
+  background-color: #0f507b;
+  border-color: #222748;
+  color: #ffffff;
+  display: flex;
+  padding: 3px;
+  border-radius: 3px;
+}
+
+.Gryffindor nav {
+  background-color: #890812;
+  justify-content: space-evenly;
+}
+.Gryffindor nav > * {
+  padding: 10px;
+}
+.Gryffindor nav a {
+  text-transform: uppercase;
+  color: #ffffff;
+  text-decoration: none;
+}
+.Gryffindor footer {
+  background-color: #890812;
+}
+.Gryffindor button, .Gryffindor .button {
+  background-color: #890812;
+  border-color: #5d0812;
+  color: #ffffff;
+  display: flex;
+  padding: 3px;
+  border-radius: 3px;
+}
+
+.Slytherin nav {
+  background-color: #0e521d;
+  justify-content: space-evenly;
+}
+.Slytherin nav > * {
+  padding: 10px;
+}
+.Slytherin nav a {
+  text-transform: uppercase;
+  color: #ffffff;
+  text-decoration: none;
+}
+.Slytherin footer {
+  background-color: #0e521d;
+}
+.Slytherin button, .Slytherin .button {
+  background-color: #0e521d;
+  border-color: #063c07;
+  color: #ffffff;
+  display: flex;
+  padding: 3px;
+  border-radius: 3px;
+}
+
+.Hufflepuff nav {
+  background-color: #efb63c;
+  justify-content: space-evenly;
+}
+.Hufflepuff nav > * {
+  padding: 10px;
+}
+.Hufflepuff nav a {
+  text-transform: uppercase;
+  color: #362e2a;
+  text-decoration: none;
+}
+.Hufflepuff footer {
+  background-color: #efb63c;
+}
+.Hufflepuff button, .Hufflepuff .button {
+  background-color: #efb63c;
+  border-color: #986c21;
+  color: #362e2a;
+  display: flex;
+  padding: 3px;
+  border-radius: 3px;
+}
+
+@media (max-width: 700px) {
+  .main-content {
+    flex-grow: 5 !important;
+  }
+}
+.main-content > .events {
+  justify-content: space-between;
+}
+.main-content > .events h2 {
+  width: 100%;
+}
+.main-content > .events .card {
+  width: calc(50% - 20px - 20px);
+  max-width: 350px;
+  max-height: 250px;
+}
+
+.side {
+  color: #434143;
+}
+.side .divider {
+  width: 100%;
+  border-bottom: 1px solid black;
+}
+@media (max-width: 700px) {
+  .side {
+    max-width: 150px;
+  }
+}
+@media (max-width: 520px) {
+  .side {
+    display: none !important;
+  }
+}
+@media (max-width: 700px) {
+  .side .community-icons {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    /* TODO Fix this*/
+  }
+}
+.side .community-icons > * {
+  padding: 10px;
+}
+.side .instagram-post {
+  width: 100%;
+}
+.side .instagram-post > .social-text {
+  font-size: 0.8em;
+}
+.side .instagram-post > img {
+  width: 100%;
+}
+.side .instagram-post .button {
+  width: 50%;
+  margin: 5px auto;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=index.css.map */

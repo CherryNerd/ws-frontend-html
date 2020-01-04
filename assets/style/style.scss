@@ -1,0 +1,25 @@
+$secondaryColor: #434143;
+
+@import "layout";
+@import "components";
+@import "houses";
+@import "nav";
+@import "content";
+@import "sidebar";
+
+html, body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    width:100vw;
+    height:100vh;
+}
+
+a {
+    text-decoration: none;
+}
